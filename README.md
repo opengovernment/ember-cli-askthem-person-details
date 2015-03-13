@@ -1,6 +1,7 @@
 # Ember-cli-askthem-person-details
 
-This README outlines the details of collaborating on this Ember addon.
+Components for presenting info about people from AskThem.io, like
+elected officials.
 
 ## Installation
 
