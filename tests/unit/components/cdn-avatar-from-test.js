@@ -5,8 +5,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForComponent('cdn-avatar-from', {
-});
+moduleForComponent('cdn-avatar-from', {});
 
 test('it takes imageUrl and returns an embed.ly image tag', function(assert) {
   var component = this.subject(),

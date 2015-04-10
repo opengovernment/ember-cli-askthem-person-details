@@ -4,7 +4,7 @@ import layout from '../templates/components/person-details';
 export default Ember.Component.extend({
   layout: layout,
   person: null,
-  isUnaffiliated: function() {
+  isUnaffiliated: Ember.computed('person', function() {
     var person = this.get('person'),
         unaffiliated = false;
 
@@ -13,5 +13,5 @@ export default Ember.Component.extend({
     }
 
     return unaffiliated;
-  }.property('person')
+  })
 });

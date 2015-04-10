@@ -9,7 +9,7 @@ export default Ember.Component.extend({
   height: 60,
   width: 60,
   alt: null,
-  src: function() {
+  src: Ember.computed('imageUrl', 'height', 'width', function() {
     var proxiedUrlBase = 'http://i.embed.ly/1/display/crop?key=',
         apiKey = '099581ac0bab44b6bfc0e3d19e0012d7',
         baseUrl = proxiedUrlBase + apiKey + '&url=',
@@ -20,5 +20,5 @@ export default Ember.Component.extend({
     queryStringEnd += '&errorurl=' + errorUrlEscaped;
 
     return baseUrl + encodeURIComponent(this.get('imageUrl')) + queryStringEnd;
-  }.property('imageUrl', 'height', 'width')
+  })
 });

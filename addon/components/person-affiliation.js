@@ -4,7 +4,7 @@ import layout from '../templates/components/person-affiliation';
 export default Ember.Component.extend({
   layout: layout,
   person: null,
-  affiliation: function() {
+  affiliation: Ember.computed('person', function() {
     var affiliation = [],
         person = this.get('person');
 
@@ -30,5 +30,5 @@ export default Ember.Component.extend({
     }
 
     return affiliation.join(', ');
-  }.property('person')
+  })
 });
